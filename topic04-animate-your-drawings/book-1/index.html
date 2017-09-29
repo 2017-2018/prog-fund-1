@@ -1,0 +1,521 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Animating your drawings
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-04">
+      Lab-04
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-04">
+        <h1>Objectives</h1>
+<p>On completion of this lab you should be able to write code to animate simple drawings, use the system variables in the PDE.  You should also understand primitive data types and be able to use them in non-complex problems.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Solution to Previous Lab</h1>
+<p>The solution for the previous lab can be found <a href="archives/lab01_solution.zip">here</a>. </p>
+<h1>Remember our lab advice!</h1>
+<ul>
+<li>Your labs are not a race to be the first student finished.</li>
+<li>It is very important that you:<ul>
+<li>take your time.</li>
+<li>read the instructions carefully.</li>
+<li>ask your lecturer to explain concepts that you don&#39;t understand; that is what we are here for!</li>
+<li>attend &#39;&#39;ALL&#39;&#39; your classes; attendance will be taken.</li>
+</ul>
+</li>
+<li>where code is given in labs, don&#39;t cut and paste it; maximise your learning by typing the code in.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Basic Animation</h1>
+<ul>
+<li>We will use the following built-in functions to animate our drawings:<ul>
+<li>setup()</li>
+<li>draw()</li>
+</ul>
+</li>
+</ul>
+<h2>A note on the setup() function</h2>
+<ul>
+<li>setup() is called once when the program starts and should not be called again.</li>
+<li>setup() can set the screen size and background colour. </li>
+<li>There can only be one setup() function for each sketch.</li>
+</ul>
+<h2>A note on the draw() function</h2>
+<ul>
+<li>You should never call the draw() function.</li>
+<li>Processing automatically calls the draw() function straight after the setup() call.</li>
+<li>draw() continuously executes the code contained inside it.</li>
+<li>There can only be one draw() function for each sketch.</li>
+</ul>
+<h2>Animating Ellipses</h2>
+<ul>
+<li><p>Open the Processing Development Environment (PDE).  If you are using the college computers and you cannot recall how to do this, follow these steps:</p>
+<ul>
+<li>Open Windows Explorer by holding down the windows key and pressing the letter E once. </li>
+<li>When Windows Explorer opens, double click on:<ul>
+<li>the <strong>C:</strong> </li>
+<li>then the <strong>dev</strong> folder</li>
+<li>then the <strong>processing</strong> folder</li>
+<li>then the <strong>processing-2.2.1</strong> folder</li>
+<li>the <strong>processing</strong> application.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Enter the following code:</p>
+</li>
+</ul>
+<p><img src="./img/01.png" alt="Animating Ellipses"></p>
+<ul>
+<li><p>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save as...&#39;&#39; menu options, save this sketchbook as &#39;&#39;lab02_step02&#39;&#39;.</p>
+</li>
+<li><p>Run the code.  You should have animation similar to the screen shot below.</p>
+</li>
+</ul>
+<p><img src="./img/02.png" alt="Animating Ellipses - Multiple Circles"></p>
+<ul>
+<li>Can you explain why there are multiple circles drawn?  Why not just one circle? </li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>Animating Ellipses (continued)</h2>
+<ul>
+<li><p>We are now going to change the code (from the previous step) so that only one circle is shown when you move the mouse.</p>
+</li>
+<li><p>Amend your code so that the background function is in the draw method instead of the setup method:</p>
+</li>
+</ul>
+<p><img src="./img/03.png" alt="Animating Ellipses - One Circle"></p>
+<ul>
+<li>Run the code.  You should have animation similar to the screen shot below.</li>
+</ul>
+<p><img src="./img/04.png" alt="Animating Ellipses - One Circle"></p>
+<ul>
+<li>Can you explain why there is only one circle drawn as we move our mouse? </li>
+</ul>
+<h2>Playing with the System Variables</h2>
+<ul>
+<li>What would happen to our animation if we swapped the &#39;&#39;mouseX&#39;&#39; and &#39;&#39;mouseY&#39;&#39; system variables in the &#39;&#39;ellipse&#39;&#39; function with each other?  Make this change (the code change is below, if you need it) and see if you can figure out what is going on.</li>
+</ul>
+<pre><code>    ellipse(mouseY, mouseX, 100, 100)</code></pre>
+<ul>
+<li>What would happen to our animation if we changed our ellipse function to be this:</li>
+</ul>
+<pre><code>    ellipse(width, mouseY, 100, 100)</code></pre>
+<ul>
+<li>Make this change and see if you can figure out what is going on.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Primitive Data Types</h1>
+<ul>
+<li>In Java, there are:<ul>
+<li>four whole number data types:  byte, short, int, long.</li>
+<li>two decimal number data types: float (default in Processing) and double (default in Java apps).</li>
+<li>a single character data type: char.</li>
+<li>a true/false data type: boolean.</li>
+</ul>
+</li>
+</ul>
+<h2>Using the int data type</h2>
+<ul>
+<li><p>Create a new Sketchbook in your PDE and save it as &#39;&#39;lab02_step04&#39;&#39;.</p>
+</li>
+<li><p>Enter the following code:</p>
+</li>
+</ul>
+<p><img src="./img/05.png" alt="Using int data type to set the size of the window"></p>
+<ul>
+<li><p>Run the code.  You should see a window with a width of 300 and a length of 400 and a black background.</p>
+</li>
+<li><p>Update the code as shown in the screen shot below:</p>
+</li>
+</ul>
+<p><img src="./img/06.png" alt="Using int data type to set the coordinates of lines"></p>
+<ul>
+<li>Run the code.  Your window should now have three blue lines similar to the screen shot below:</li>
+</ul>
+<p><img src="./img/07.png" alt="Using int data type to set the coordinates of lines"></p>
+<ul>
+<li>Update the code to produce the following output.  Note: you must use the a,b,c and d variables to generate these lines:</li>
+</ul>
+<p><img src="./img/08.png" alt="Using int data type to set the coordinates of lines"></p>
+<h2>A syntax error</h2>
+<ul>
+<li><p>Update the code by changing &#39;&#39;int&#39;&#39; to &#39;&#39;Int&#39;&#39; (uppercase I).  Run your code again.  What happened? Can you explain what happened?  Ask your lecturer to explain it if you are not sure. </p>
+</li>
+<li><p>Change &#39;&#39;Int&#39;&#39; back to &#39;&#39;int&#39;&#39;.</p>
+</li>
+</ul>
+<h2>Another syntax error</h2>
+<ul>
+<li><p>Update the code by changing the amount assigned to variable &#39;&#39;a&#39;&#39; from 70 to 70.56.  Run your code again.  What happened? Can you explain what happened?  Ask your lecturer to explain it if you are not sure. </p>
+</li>
+<li><p>Change 70.56 back to 70.</p>
+</li>
+<li><p>Save and close the sketchbook.</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Primitive Data Types</h1>
+<h2>Using the float data type</h2>
+<ul>
+<li><p>Create a new Sketchbook in your PDE and save it as &#39;&#39;lab02_step05&#39;&#39;.</p>
+</li>
+<li><p>Enter the following code:</p>
+</li>
+</ul>
+<p><img src="./img/09.png" alt="Using the float data type to set the coordinates of a square"></p>
+<ul>
+<li>Run the code.  You should see a grey window with a white square drawn in it.</li>
+</ul>
+<h2>Not a syntax error!</h2>
+<ul>
+<li><p>Update the code by changing the amount assigned to the xCoordinate variable from 50.67 to just 50</p>
+</li>
+<li><p>Run the code.  Why did it work? Can you explain what happened?  Ask your lecturer to explain it if you are not sure. </p>
+</li>
+<li><p>Change the amount assigned to the xCoordinate variable back to 50.67.</p>
+</li>
+</ul>
+<h2>A syntax error</h2>
+<ul>
+<li><p>Update the code by changing &#39;&#39;float&#39;&#39; to &#39;&#39;double&#39;&#39;.  Run your code again.  What happened? Can you explain what happened?  Ask your lecturer to explain it if you are not sure. </p>
+</li>
+<li><p>Change &#39;&#39;double&#39;&#39; back to &#39;&#39;float&#39;&#39;.</p>
+</li>
+</ul>
+<h2>Another syntax error</h2>
+<ul>
+<li><p>Update the code by renaming the &#39;&#39;yCoordinate&#39;&#39; variable name to &#39;&#39;xCoordinate&#39;&#39;.  Run your code again.  What happened? Can you explain what happened?  Ask your lecturer to explain it if you are not sure. </p>
+</li>
+<li><p>Change the code back.</p>
+</li>
+<li><p>Save and close the sketchbook.</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<ul>
+<li><p>The exercises are typically based on the material we covered in the previous steps in this lab.</p>
+</li>
+<li><p>For each exercise listed below, open a new sketchbook.</p>
+</li>
+<li><p>For the <strong>challenge exercises</strong> you may need to visit the <a href="https://processing.org/reference/">Processing website</a> for additional information.</p>
+</li>
+<li><p>When you are finished all your exercises, zip all your exercises into one file and upload them into <strong>lab02</strong> dropbox in Moodle.</p>
+</li>
+</ul>
+<h2>Exercise 1 (static drawing)</h2>
+<ul>
+<li>The following is a slide from your lecture:</li>
+</ul>
+<p><img src="./img/10.png" alt="Slide from your lecture"></p>
+<ul>
+<li>Using this code as a starting point, make the following changes so that your output looks like this:</li>
+</ul>
+<p><img src="./img/11.png" alt="Desired output"></p>
+<ul>
+<li>NOTE: the object of this exercise is to use the arithmetic operators (e.g. +,-,/,*) on the variables (a,b,c).</li>
+</ul>
+<h2>Exercise 2 (static drawing)</h2>
+<ul>
+<li>The object of this exercise is to produce the same output as Exercise 1, but instead of using variables (a,b,c) use appropriate system variables (i.e. width, height) and perform artihmetic operations on them to produce the desired output.</li>
+</ul>
+<h2>Exercise 3 (animated drawing)</h2>
+<ul>
+<li><p>Produce the following animation:</p>
+<ul>
+<li>a white circle is drawn when you move the mouse; only one circle is visible at one time (i.e. all previous ones are cleared).</li>
+<li>the x and y coordinates for the circle are dependent on the mouse position (hint: use system variables mouseX and mouseY).</li>
+<li>the size of the circle is determined by the y mouse coordinate.</li>
+</ul>
+</li>
+<li><p>When you run your code, your circle show grow in size as you move your mouse pointer down the window and reduce in size when you move your mouse up the window.  When you move your mouse horizontally, the circle should stay the same size.</p>
+</li>
+</ul>
+<h2>Exercise 4 (animated drawing)</h2>
+<ul>
+<li><p>Using exercise 3 as a starting point, add the following animation to it:</p>
+<ul>
+<li>a black circle is drawn when you move the mouse (all previous black circles are cleared).</li>
+<li>the x coordinate for the circle is the mouseY coordinate and the y coordinate for the circle is mouseX.</li>
+<li>the size of the circle is determined by the x mouse coordinate.</li>
+</ul>
+</li>
+<li><p>When you run your code, the black circle should overlap the white circle when you drag your mouse from (0,0) diagnolally down to (100,100).  When you move your mouse horizontally, the black circle show grow/shrink in size.  It remains the same size when the mouse is dragged vertically.  Note that the white circle&#39;s behaviour hasn&#39;t changed.</p>
+</li>
+</ul>
+<h2>Challenge Exercise 1 (animated drawing with no cursor)</h2>
+<ul>
+<li>Do some research to figure out how to turn the mouse pointer (cursor) off.</li>
+<li>Implement this functionality in any one of you exercises above.</li>
+</ul>
+<h2>Challenge Exercise 2 (animated drawing with a different cursor)</h2>
+<ul>
+<li>Do some research to figure out how to turn the mouse pointer (cursor) into a <em>hand</em>.</li>
+<li>Implement this functionality in any one of you exercises above.</li>
+</ul>
+<h2>Challenge Exercise 3 (animated drawing using a drag effect)</h2>
+<ul>
+<li>Do some research into the Processing variables:  pmousex and pmousey.</li>
+<li>Write a Processing sketch that uses these variables. </li>
+</ul>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
