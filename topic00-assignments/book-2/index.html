@@ -115,13 +115,13 @@ body
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-       Animating your drawings
+       Assignments
     </a>
   </header>
   <div class="right tab-menu menu">
     
-    <a class="item" data-tab="Code to Download">
-      Code to Download
+    <a class="item" data-tab="Assignment-1">
+      Assignment-1
     </a>
     
     <a class="item" data-tab="01">
@@ -138,10 +138,6 @@ body
     
     <a class="item" data-tab="04">
       04
-    </a>
-    
-    <a class="item" data-tab="05">
-      05
     </a>
     
     <div class="item">
@@ -218,134 +214,145 @@ body
     <div class="ui basic segment" id="labchat">
       <br>
       
-      <div  class="ui tab segment lab" data-tab="Code to Download">
-        <h1>Objectives</h1>
-<p>On completion of this lab you should aim to have downloaded the code used in class and understand it.</p>
+      <div  class="ui tab segment lab" data-tab="Assignment-1">
+        <h1>Assignment 1 (30%)</h1>
+<p>This is your first assignment that will contribute to your grade for the module.  You are asked to write a working animation. You will then be asked to present your code during your lab the week following submission.</p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="01">
-        <h1>Code used in lectures this week</h1>
-<p>The solution for the previous lab can be found <a href="archives/lab01_solution.zip">here</a>. </p>
-<h1>Remember our lab advice!</h1>
+        <h1>Specification</h1>
+<p>This is the specification of your first summative assignment. This means that this is the first time that your submission will go towards your final module mark. This specification will describe:</p>
 <ul>
-<li>Your labs are not a race to be the first student finished.</li>
-<li>It is very important that you:<ul>
-<li>take your time.</li>
-<li>read the instructions carefully.</li>
-<li>ask your lecturer to explain concepts that you don&#39;t understand; that is what we are here for!</li>
-<li>attend &#39;&#39;ALL&#39;&#39; your classes; attendance will be taken.</li>
+<li>What is expected from your code</li>
+<li>The marking scheme for the assignment.</li>
+<li>Submission details including submission date</li>
+</ul>
+<h1>Assignment Advice</h1>
+<ul>
+<li>Read the specification carefully.</li>
+<li>Start working on the assignment early.</li>
+<li>When you think you are ready to submit check the following: <ul>
+<li>Ensure you have all covered all the elements mentioned in the marking scheme</li>
+<li>Ensure specifically that your indentation is consistent. </li>
+<li>Write comments to explain what any methods do and how any particularly tricky code works and whatt it does</li>
+<li>Ensure that your name, student number and description of what your code does is written at the top of the sketch file.</li>
+<li>Ensure that you have named the submission (zip) file according to the prescribed naming convention i.e. firstnameSurname.zip </li>
 </ul>
 </li>
-<li>where code is given in labs, don&#39;t cut and paste it; maximise your learning by typing the code in.</li>
 </ul>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="02">
-        <h1>draw() method</h1>
-<pre><code>void setup()
-{
-  size(500,400); 
-  background(0);
-}
-
-void draw()
-{
-  stroke(0, 0, 0);
-  fill(60, 220, 90);
-  ellipse(mouseX, mouseY, 100, 100);
-}</code></pre>
+        <h1>Specification</h1>
+<p>You are asked to write code to produce a working animation of your choice. The aim of the assignment is for you to demonstrate your understanding of structures seen so far, so you are asked to include the following:</p>
+<ul>
+<li><p>Methods:</p>
+<ul>
+<li>setup(), draw(), any other methods appropriate to your animation.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Conditional Statements:</p>
+<ul>
+<li>if and if-else statements</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Repetition:</p>
+<ul>
+<li>loops and nested loops (note the draw() method does not consitute a loop in this case).</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Coding Standards:</p>
+<ul>
+<li>follow naming conventions, indentation, commenting, etc.</li>
+</ul>
+</li>
+</ul>
+<p>The complexity of the entire code is important, i.e. the more complex the code, the more marks you will achieve (see marking scheme).</p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="03">
-        <h2>Declaring Variables</h2>
-<pre><code>byte firstNumber;          //declares a variable firstNumber of type byte
-int secondNumber;       //declares a variable secondNumber of type int
-
-firstNumber = 40;          //assign a value of 40 to firstNumber
-secondNumber = 70;    //assign a value of 70 to secondNumber
-
-int thirdNumber = 80;   //you can declare a variable and assign a value
-                                     //on one line.
-
-int x, y, z;                      //multiple variables of the same type can be defined
-                                    //on one line.</code></pre>
+        <h1>Marking Scheme</h1>
+<p>There are three components to your overall mark:</p>
+<ul>
+<li>Structure of code</li>
+<li>Complexity of code</li>
+<li>Interview mark</li>
+</ul>
+<h1>Structure of Code  (100 Marks)</h1>
+<ul>
+<li>Working animation using setup() and draw() <strong>(20 Marks)</strong></li>
+<li>Use of methods <strong>(20 marks)</strong><ul>
+<li>i.e. methods <em>other</em> than setup() and draw() </li>
+</ul>
+</li>
+<li>Use of loops:<ul>
+<li>loop <strong>(20 Marks)</strong></li>
+<li>nested loop <strong>(10 extra marks)</strong></li>
+</ul>
+</li>
+<li>Use of:<ul>
+<li>if statement <strong>(10 Marks)</strong></li>
+<li>if .. then .. else <strong>(5 extra Marks)</strong></li>
+</ul>
+</li>
+<li>Comments, indentation, naming standards, etc <strong>(15 Marks)</strong> </li>
+</ul>
+<h1>Complexity of code (10 Marks)</h1>
+<p>This is a mark out of 10 based on the complexity of the problem solved/code. So you will get more marks if the animation is more involved than one that is very simple. Please do not confuse an elegant solution of a complex problem with a simple problem.</p>
+<h1>Interview Mark (10 Marks)</h1>
+<p>You will be asked to explain your work. This is to ensure that the work is your own. You may be asked (for example) to explain:</p>
+<ul>
+<li>Any of the code.</li>
+<li>The effect of changing values in the for loop.</li>
+<li>How you decided on your animation and how you developed it. </li>
+<li>Anything else.</li>
+</ul>
+<h1>How is the final mark calculated?</h1>
+<p> The final mark is calculated by multiplying the three component marks and dividing by 100. This means that each of the marks is used as a multiplier so a weakness in any of the components will result in an overall lower grade.</p>
+<p> Example:</p>
+<ul>
+<li>Structure of code = 80/100</li>
+<li>Complexity of code = 9/10</li>
+<li>Interview Mark = 10/10</li>
+<li>Final mark = (80 by 9 by 10)/100 = 72%</li>
+</ul>
+<h1>Note</h1>
+<p>Specifically, the multiplier effect means that if you do not present for your interview you will receive 0 for the interview and 0% overall. This means you <strong>must</strong> be avaiable for interview during the labs the week after submission. </p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="04">
-        <h1>System Variables in Processing</h1>
-<pre><code>void setup()
-{
-  size(500,400); 
-}
+        <h1>Handup of submission</h1>
+<h2>Date</h2>
+<p>The submission is due on Sunday 5th November at 5PM  SHARP.  No late submissions will be accepted (unless mitigating circumstances, with supporting documentation, apply).</p>
+<h2>Where</h2>
+<p>The dropbox is available in the &#39;Assignments&#39; section.</p>
+<h2>File naming convention</h2>
+<p>Your file should be contained in a sketchbook named  according to the rule: </p>
+<p>first name + Second name, e.g. Siobhan Drohan&#39;s sketchbook would be called siobhanDrohan. You should then compress (zip) the <strong>folder</strong> that contains this  sketchbook (siobhanDrohan) and this is the file that you should submit.</p>
+<h2>readme tab</h2>
+<p>You should include a readme tab in the sketchbook that you use to write the following information in the following format:</p>
+<pre><code>/*
+Name : 
+Student Number:
+Programme Name: 
 
-void draw()
-{
-  background(0);
-  stroke(0, 0, 0);
-  fill(60, 220, 90);
-  rect(0,100,width, 15);
-  ellipse(mouseX, mouseY, 100, 100);
-}</code></pre>
+Brief description of the animation achieved:
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="05">
-        <h1>Arithmethic Operators - Exercises</h1>
-<h2>Exercise 1</h2>
-<pre><code>size(500, 400);
-background(0);
-stroke(153);
-strokeWeight(4);
+Known bugs/problems:
 
-int a = 50;
-int b = 120;
-int c = 180;
+Any sources referred to during the development of the assignment (no need to reference lecture/lab materials):
 
-line(a, b, a+c, b);
-line(a, b+10, a+c, b+10);
-line(a, b+20, a+c, b+20);
-line(a, b+30, a+c, b+30);</code></pre>
-<h2>Exercise 2</h2>
-<pre><code>size(500, 400);
-background(0);
-stroke(153);
-strokeWeight(4);
-
-int a = 50;
-int b = 120;
-int c = 180;
-
-line(a, b, a+c, b);
-line(a, b+10, a+c, b+10);
-line(a, b+20, a+c, b+20);
-line(a, b+30, a+c, b+30);
-
-a = a + c;
-b = height-b;
-
-line(a, b, a+c, b);
-line(a, b+10, a+c, b+10);
-line(a, b+20, a+c, b+20);
-line(a, b+30, a+c, b+30);</code></pre>
-<h2>Exercise 3</h2>
-<pre><code>size(400, 200);
-background(0);
-stroke(153);
-strokeWeight(4);
-
-int a = 50;
-int b = 1500;
-int c = 4;
-
-line(a, b/10, a*c, b/10);
-line(a, b/20, a*c, b/20);
-line(a, b/30, a*c, b/30);
-line(a, b/40, a*c, b/40);
-line(a, b/50, a*c, b/50);</code></pre>
+*/</code></pre>
 
       </div>
      
