@@ -1,0 +1,739 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Using Methods
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-07">
+      Lab-07
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00-assignments/book-1/index.html">
+          Formative Assessment
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00-assignments/book-2/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-1/index.html">
+          Lab-01a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-2/index.html">
+          Lab-01b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-scratching-deeper/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-intro-to-processing/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-2/index.html">
+          Code to Download
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-conditionals-and-events/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-iteration-for-while/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-methods/book/index.html">
+          Lab-07
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-07">
+        <h1>Objectives</h1>
+<p>On completion of this lab you should be able to use methods to handle mouse events and also be able to write your own methods.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Solution to Previous Lab</h1>
+<p>The solution for the previous lab can be found <a href="archives/lab04_solution.zip">here</a>. </p>
+<h1>Remember our lab advice!</h1>
+<ul>
+<li>Your labs are not a race to be the first student finished.</li>
+<li>It is very important that you:<ul>
+<li>take your time.</li>
+<li>read the instructions carefully.</li>
+<li>ask your lecturer to explain concepts that you don&#39;t understand; that is what we are here for!</li>
+<li>attend &#39;&#39;ALL&#39;&#39; your classes; attendance will be taken.</li>
+</ul>
+</li>
+<li>where code is given in labs, don&#39;t cut and paste it; maximise your learning by typing the code in.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Understanding mouse event methods</h1>
+<ul>
+<li>In this step, you will work on the processing example 5.1 from your lectures.</li>
+</ul>
+<h2>Coding the setup() method</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_mouseMethods</strong>.</p>
+</li>
+<li><p>Enter the following code into your sketchbook (don&#39;t cut and paste it):</p>
+</li>
+</ul>
+<pre><code>void setup() 
+{
+    size(400, 400);
+    background(0);
+    textAlign(CENTER);
+    textSize(24);
+    fill(255);
+    text(&quot;mouse has done nothing&quot;, width/2, height/2);
+}</code></pre>
+<ul>
+<li><p>Run the code so that you understand exactly what it does.</p>
+</li>
+<li><p>You have used a new method called <strong>text</strong>.  Go to the processing website and read about this method in the API reference area.</p>
+</li>
+</ul>
+<h2>Coding the draw() method</h2>
+<ul>
+<li><p>Mouse and keyboard events only work when a program has draw().</p>
+</li>
+<li><p>Without draw(), the code is only run once and then stops listening for events.</p>
+</li>
+<li><p>To your open sketch, add the draw() method to it.  The body of the method should be empty.</p>
+</li>
+</ul>
+<h2>Coding the mouseMoved() method</h2>
+<ul>
+<li><p>Add a mouseMoved method that will change the background to a red colour.</p>
+</li>
+<li><p>Print the following text to the display window (not the console):</p>
+<ul>
+<li>&quot;mouse was moved&quot;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Run your code.  Does it work as you would expect when you move the mouse?</p>
+</li>
+<li><p>Note: the code for this method is here:</p>
+</li>
+</ul>
+<pre><code>void mouseMoved() 
+{ 
+    background(150, 10, 70); 
+    text(&quot;mouse was moved&quot;, width/2, height/2); 
+}</code></pre>
+<h2>Coding the mouseDragged() method</h2>
+<ul>
+<li><p>Add a mouseDragged method that will change the background to a blue colour.</p>
+</li>
+<li><p>Print the following text to the display window (not the console):</p>
+<ul>
+<li>&quot;mouse was dragged&quot;</li>
+</ul>
+</li>
+<li><p>Run your code.  Does it work as you would expect when you drag the mouse?</p>
+</li>
+<li><p>Note: the code for this method is here:</p>
+</li>
+</ul>
+<pre><code>void mouseDragged() 
+{ 
+    background(10, 70, 100); 
+    text(&quot;mouse was dragged&quot;, width/2, height/2); 
+}</code></pre>
+<h2>Coding the mouseReleased() method</h2>
+<ul>
+<li><p>Add a mouseReleased method that will change the background to a purple colour.</p>
+</li>
+<li><p>Print the following text to the display window (not the console):</p>
+<ul>
+<li>&quot;mouse was released&quot;</li>
+</ul>
+</li>
+<li><p>Run your code.  Does it work as you would expect when you release the mouse?</p>
+</li>
+<li><p>Note: the code for this method is here:</p>
+</li>
+</ul>
+<pre><code>void mouseReleased() 
+{ 
+    background(100, 0, 100); 
+    text(&quot;mouse was released&quot;, width/2, height/2); 
+}</code></pre>
+<h2>Coding the mousePressed() method</h2>
+<ul>
+<li><p>Add a mousePressed method that will change the background to a green colour.</p>
+</li>
+<li><p>Print the following text to the display window (not the console) when the left button was pressed:</p>
+<ul>
+<li>&quot;mouse was pressed and it was the left button&quot;</li>
+</ul>
+</li>
+<li><p>Print the following text to the display window (not the console) when the right button was pressed:</p>
+<ul>
+<li>&quot;mouse was pressed and it was the right button&quot;</li>
+</ul>
+</li>
+<li><p>Run your code.  Does it work as you would expect when you press the left and then the right mouse buttons?</p>
+</li>
+<li><p>Note: the code for this method is here:</p>
+</li>
+</ul>
+<pre><code>void mousePressed() 
+{
+    background(100, 100, 0);
+    text(&quot;mouse was pressed&quot;, width/2, height/2);
+    if ( mouseButton == LEFT) 
+    {
+        text(&quot;and it was the left button&quot;, width/2, height/2 + 40);
+    }
+    if (mouseButton == RIGHT) 
+    {
+        text(&quot;and it was the right button&quot;, width/2, height/2 + 40);
+    }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Mouse event methods</h1>
+<ul>
+<li>The code examples 3.5 to 3.8 inclusive from your lectures use the mouse system variables e.g. mousePressed. </li>
+<li>In this step, you will re-write the code to use mouse event methods instead e.g. void mousePressed(). </li>
+</ul>
+<h2>Example 3.5</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_Exercise_3_5_reworked</strong>.</p>
+</li>
+<li><p>Cut and paste the following code into your sketchbook:</p>
+</li>
+</ul>
+<pre><code>void setup() {
+  size(100,100);
+}
+
+void draw() {
+   background(0);
+   stroke(255);
+   fill(128);
+   if (mousePressed){
+       rect(45,45,34,34); 
+   }
+   else{
+       ellipse(45,45,34,34);     
+   }
+}</code></pre>
+<ul>
+<li><p>Run the code so that you understand exactly what it does.</p>
+</li>
+<li><p>Rework the code so that it no longer tests the <strong>mousePressed</strong> variable but uses the <strong>void mousePressed()</strong> method instead.</p>
+</li>
+<li><p>Run your code.  Does it work as you would expect?</p>
+</li>
+</ul>
+<h2>Example 3.6</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_Exercise_3_6_reworked</strong>.</p>
+</li>
+<li><p>Cut and paste the following code into your sketchbook:</p>
+</li>
+</ul>
+<pre><code>void setup() {
+  size(100,100);
+}
+
+void draw() {
+  background(204);
+  if (mousePressed == true)    
+  {
+       fill(255); // white
+   } else {
+       fill(0);     // black
+   }
+   rect(25, 25, 50, 50);
+}</code></pre>
+<ul>
+<li><p>Run the code so that you understand exactly what it does.</p>
+</li>
+<li><p>Rework the code so that it no longer tests the <strong>mousePressed</strong> variable but uses the <strong>void mousePressed()</strong> method instead.</p>
+</li>
+<li><p>Run your code.  Does it work as you would expect?</p>
+</li>
+</ul>
+<h2>Example 3.7</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_Exercise_3_7_reworked</strong>.</p>
+</li>
+<li><p>Cut and paste the following code into your sketchbook:</p>
+</li>
+</ul>
+<pre><code>void setup() {
+  size(100,100);
+}
+
+void draw() { 
+   if (mousePressed){
+       if (mouseButton == LEFT) 
+            fill(0);      // black
+       else if (mouseButton == RIGHT)
+            fill(255);    // white
+   }        
+   else { 
+       fill(126);     // gray
+    }
+    rect(25, 25, 50, 50);
+}</code></pre>
+<ul>
+<li><p>Run the code so that you understand exactly what it does.</p>
+</li>
+<li><p>Rework the code so that it no longer tests the mouse system variable but uses the mouse event methods instead.</p>
+</li>
+<li><p>Run your code.  Does it work as you would expect?</p>
+</li>
+</ul>
+<h2>Example 3.8</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_Exercise_3_8_reworked</strong>.</p>
+</li>
+<li><p>Cut and paste the following code into your sketchbook:</p>
+</li>
+</ul>
+<pre><code>void setup() {
+  size(500,400);
+  background(0);
+}
+
+void draw() {
+
+  if (mousePressed) {
+    background(0);
+  }
+
+  stroke(255);
+  fill(45,45,45);
+  ellipse(mouseX, mouseY, 100, 100);
+}</code></pre>
+<ul>
+<li><p>Run the code so that you understand exactly what it does.</p>
+</li>
+<li><p>Rework the code so that it no longer tests the mouse system variable but uses the mouse event methods instead.</p>
+</li>
+<li><p>Run your code.  Does it work as you would expect?</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Writing your own methods</h1>
+<ul>
+<li>In this step, you will work on reproducing the code examples 5.2 to 5.6 inclusive from your lectures.</li>
+</ul>
+<h2>Example 5.2</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_Exercise_5.2</strong>.</p>
+</li>
+<li><p>Write a method called <strong>drawRedSquare</strong> that takes no parameters.  </p>
+</li>
+<li><p>The return type for this method is <strong>void</strong>.</p>
+</li>
+<li><p>The method body should include the following processing:</p>
+<ul>
+<li>set the fill colour to red.</li>
+<li>draw a square with a length of 60 pixels at the coordinates (70,70).</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>The <strong>drawRedSquare</strong> method should be called from the draw() method.</li>
+</ul>
+<h2>Example 5.3</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_Exercise_5.3</strong>.</p>
+</li>
+<li><p>Write a method called <strong>drawRedSquare</strong> that takes one parameter of type <strong>int</strong>.  This parameter will be used to set the length of the square.</p>
+</li>
+<li><p>The return type for this method is <strong>void</strong>.</p>
+</li>
+<li><p>The method body should include the following processing:</p>
+<ul>
+<li>set the fill colour to red.</li>
+<li>draw a square at the coordinates (70,70) and used the int parameter to determine the length.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>The <strong>drawRedSquare</strong> method should be called from the draw() method, passing the value <strong>60</strong> as its argument.</p>
+</li>
+<li><p>Run your code.  Does it work as you would expect?</p>
+</li>
+</ul>
+<h2>Example 5.4</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_Exercise_5.4</strong>.</p>
+</li>
+<li><p>Write a method called <strong>drawRedSquare</strong> that takes three parameters.  Each of the parameters is of type <strong>int</strong>:</p>
+<ul>
+<li>parameter one represents the length of the square.</li>
+<li>parameter two represents the xCoordinate of the square.</li>
+<li>parameter three represents the yCoordinate of the square.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>The return type for this method is <strong>void</strong>.</p>
+</li>
+<li><p>The method body should include the following processing:</p>
+<ul>
+<li>set the fill colour to red.</li>
+<li>draw a square where:<ul>
+<li>the length of the square is the value passed as the first parameter into the method.</li>
+<li>its coordinates are those that were passed as the second and third arguments to the method. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>The <strong>drawRedSquare</strong> method should be called from the draw() method, passing the values <strong>60, 70, 40</strong> as its arguments.</p>
+</li>
+<li><p>Run your code.  Does it work as you would expect?</p>
+</li>
+</ul>
+<h2>Example 5.5</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_Exercise_5.5</strong>.</p>
+</li>
+<li><p>Enter the following code into the sketchbook (don&#39;t cut and paste, write it out):</p>
+</li>
+</ul>
+<pre><code>void setup() 
+{ 
+    size(200,200); 
+    background(20,70,105); 
+}
+
+void draw()
+{
+    for (int i = 1; i &lt; 7; i++)
+    {
+        drawRedSquare(25, i*25, i*20);
+    }
+}
+
+void drawRedSquare(int length, int xCoord, int yCoord)
+{
+    fill(255,0,0);
+    rect(xCoord,yCoord, length, length);
+}</code></pre>
+<ul>
+<li><p>This code calls the drawRedSquare method multiple times (using a for loop).  </p>
+</li>
+<li><p>Run your code.  Does it work as you would expect?  Are 6 red squares drawn on the display window?</p>
+</li>
+<li><p>Now re-write the for loop so that it is a while loop.  Run and test your code again.  There should be no changes in the display window.</p>
+</li>
+</ul>
+<h2>Example 5.6</h2>
+<ul>
+<li><p>Create a new Processing sketch in your workspace and call it <strong>Lab05_Exercise_5.6</strong>.</p>
+</li>
+<li><p>Enter the following code into the sketchbook (don&#39;t cut and paste, write it out):</p>
+</li>
+</ul>
+<pre><code>int value = 30;
+
+void setup()
+{
+    int result = timestwo(value);
+    println(result);
+}
+
+int timestwo(int val) 
+{ 
+    val = val * 2; 
+    return val; 
+}</code></pre>
+<ul>
+<li><p>This code calls the <strong>timesTwo</strong> method from the setup() method.  This means that the <strong>timesTwo</strong> method is only called once.</p>
+</li>
+<li><p>The <strong>timesTwo</strong> method takes in a parameter of type <strong>int</strong>, it multiplies the value of this parameter by 2 and then returns the value back to where the method was called from.  It stores the returned value in another variable of type <strong>int</strong> that is called <strong>result</strong>.  The value of the variable <strong>result</strong> is printed to the console.</p>
+</li>
+<li><p>Run your code.  Does it work as you would expect?  Is the value 60 printed to the console?</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<ul>
+<li>There are no defined exercises for you this week.  Instead, please use your lab time to work on your assignment.</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
