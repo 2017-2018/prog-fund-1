@@ -1,0 +1,1001 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Classes - adding Methods
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-10">
+      Lab-10
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00-assignments/book-1/index.html">
+          Formative Assessment
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00-assignments/book-2/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00-assignments/book-3/index.html">
+          Assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-1/index.html">
+          Lab-01a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-2/index.html">
+          Lab-01b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-scratching-deeper/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-intro-to-processing/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-2/index.html">
+          Code to Download
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-conditionals-and-events/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-iteration-for-while/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-methods/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-more-on-methods/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-strings-and-intro-to-classes/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-classes-encapsulation/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-2/index.html">
+          Lab-9b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-3/index.html">
+          Lab-11c
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-1/index.html">
+          Lab-12a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-2/index.html">
+          Lab-12b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-3/index.html">
+          Lab-12c
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-10">
+        <h1>Objectives</h1>
+<p>On completion of this lab you should be able to write methods for a class and call those methods, implement given validation rules in setters and constructors and use encapsulation techniques.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Remember our lab advice!</h1>
+<ul>
+<li>Your labs are not a race to be the first student finished.</li>
+<li>It is very important that you:<ul>
+<li>take your time.</li>
+<li>read the instructions carefully.</li>
+<li>ask your lecturer to explain concepts that you don&#39;t understand; that is what we are here for!</li>
+<li>attend &#39;&#39;ALL&#39;&#39; your classes; attendance will be taken.</li>
+</ul>
+</li>
+<li>where code is given in labs, don&#39;t cut and paste it; maximise your learning by typing the code in.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Adding behaviour (Methods) to Spot</h1>
+<ul>
+<li>We have seen how the fields are used in classes</li>
+<li>We now look at the behaviour (methods) in classes</li>
+</ul>
+<h2>Adding methods to Spot</h2>
+<p>In this step, you will write the methods as used in Spot (the Spot examples in Spot Versions 4.0 to 6.1).</p>
+<p>Create a new Processing sketch in your workspace and call it Spot_Version4_0.</p>
+<ul>
+<li>At each stage, you should sketch the class diagram (on paper) at that point. </li>
+</ul>
+<h2>display() method</h2>
+<p>Include the following code in your sketch (don&#39;t cut and paste it, type it in):
+Firstly the class Spot (in the Spot tab):</p>
+<pre><code>class Spot{
+  float xCoord, yCoord;
+  float diameter;
+
+  Spot()
+  {
+  }
+
+ Spot(float xPos, float yPos, float diamtr)
+ {
+    xCoord = xPos;
+    yCoord = yPos;
+    diameter = diamtr;
+  }
+
+  void display()
+  {
+    ellipse(xCoord, yCoord, diameter, diameter);
+  }
+
+}</code></pre>
+<p>and then the calling code in another tab (we call it the Spot_Version4_0 tab)</p>
+<pre><code>Spot sp;
+
+void setup()
+{
+  size (100,100);
+  noStroke();
+  sp = new Spot(33, 50, 30);
+}
+
+void draw()
+{
+  background(0);
+  sp.display();
+}</code></pre>
+<p>Run your code (from Spot_Version4_0 tab) You should get the following output:</p>
+<p><img src="./img/01.png" alt="Drawing spot using display method"></p>
+<ul>
+<li>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save&#39;&#39; menu options, save this sketchbook. </li>
+</ul>
+<h2>Adding colour() method</h2>
+<ul>
+<li>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save As..&#39;&#39; menu option, save this sketchbook as &#39;&#39;Spot_Version5_0&#39;&#39;.</li>
+<li>Add the following fields to the Spot class </li>
+</ul>
+<pre><code>  int red, green, blue, gray;</code></pre>
+<ul>
+<li>Add the following colour() method code to the Spot class:</li>
+</ul>
+<pre><code>void colour(int redVal, int greenVal, int blueVal)
+  {
+    red = redVal;
+    green = greenVal;
+    blue = blueVal;
+    fill (red, green, blue);
+  }</code></pre>
+<ul>
+<li>and then in the calling code in another tab (we call it the Spot_Version5_0 tab), change the draw() method to: </li>
+</ul>
+<pre><code>void draw()
+{
+  background(0);
+  sp.colour(255,10,20);
+  sp.display();
+}</code></pre>
+<ul>
+<li><p>Run the code.  Your output should now look like:
+<img src="./img/02.png" alt="Drawing spot with display() and colour() methods"></p>
+</li>
+<li><p>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save&#39;&#39; menu option, save this sketchbook.</p>
+</li>
+</ul>
+<h2>Adding a second (overloaded) colour() method</h2>
+<ul>
+<li><p>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save As..&#39;&#39; menu option, save this sketchbook as &#39;&#39;Spot_Version5_1&#39;&#39;.</p>
+</li>
+<li><p>Include the following extra method code in your Spot class (don&#39;t cut and paste it, type it in):</p>
+</li>
+</ul>
+<pre><code> void colour(int grayVal)
+  {
+    gray = grayVal;
+    fill (gray);
+  }</code></pre>
+<ul>
+<li>Now we want to call this extra method, so you need to change the user code (in the Spot_Version5_1 tab )</li>
+</ul>
+<pre><code>void draw()
+{
+  background(0);
+  sp.colour(125);
+  sp.display();
+}</code></pre>
+<ul>
+<li><p>Run the code.  Your output should now look like:
+<img src="./img/03.png" alt="Drawing spot with second colour method"></p>
+</li>
+<li><p>Can you explain why the output is different from  the previous output. </p>
+</li>
+<li><p>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save&#39;&#39; menu options, save this sketchbook.(&#39;&#39;Spot_Version5_1&#39;&#39;).</p>
+</li>
+</ul>
+<h2>Adding another constructor (to introduce a grayscale starting colour)</h2>
+<ul>
+<li><p>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save As..&#39;&#39; menu option, save this sketchbook as &#39;&#39;Spot_Version5_2&#39;&#39;.</p>
+</li>
+<li><p>Include the following extra method code in your Spot class (don&#39;t cut and paste it, type it in):</p>
+</li>
+</ul>
+<pre><code> Spot(float xPos, float yPos, float diamtr, int grayVal)
+   {
+     xCoord = xPos;
+     yCoord = yPos;
+     diameter = diamtr;
+     colour(grayVal);  
+   }</code></pre>
+<ul>
+<li>This constructor allows us to define the colour (in grayscale) of the spot when creating the object. </li>
+<li>Now we want to call this extra constructor, so you need to change the user code (in the Spot_Version5_2 tab. Change the this code to:</li>
+</ul>
+<pre><code>Spot sp;
+
+void setup()
+{
+  size (100,100);
+  noStroke();
+  sp = new Spot(33, 50, 30, 125);
+}
+
+void draw()
+{
+  background(0);
+  sp.display();
+}</code></pre>
+<ul>
+<li><p>Your output should now look like:
+<img src="./img/03.png" alt="Drawing spot with second colour method"></p>
+</li>
+<li><p>Why is this producing the same output? If you don&#39;t understand, please ask your lecturer.</p>
+</li>
+<li><p>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save&#39;&#39; menu options, save this sketchbook.(&#39;&#39;Spot_Version5_2&#39;&#39;)</p>
+</li>
+</ul>
+<h2>Adding another constructor (to introduce an r,g,b starting colour)</h2>
+<ul>
+<li>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save As..&#39;&#39; menu option, save this sketchbook as &#39;&#39;Spot_Version5_3&#39;&#39;.</li>
+<li>Include the following code in your sketch  - first tab (don&#39;t cut and paste it, type it in):</li>
+</ul>
+<pre><code> Spot(float xPos, float yPos, float diamtr, int redVal, int greenVal, int blueVal)
+   {
+     xCoord = xPos;
+     yCoord = yPos;
+     diameter = diamtr;
+     colour(redVal, greenVal, blueVal);  
+   }</code></pre>
+<ul>
+<li>Then insert the changed setup method in the Spot_Version5_3 tab</li>
+</ul>
+<pre><code>void setup()
+{
+  size (100,100);
+  noStroke();
+  sp = new Spot(33, 50, 30, 255,150,50);
+}</code></pre>
+<ul>
+<li><p>Run the code.  You should see the a differently coloured spot. 
+<img src="./img/04.png" alt="Drawing spot using rgb constructor"></p>
+</li>
+<li><p>Change the rgb values in the constructor and see how this changes the colour in the spot. </p>
+</li>
+<li>Also use the colour method in the draw() method to change the colour.. Will this work? Is this the best use of the constructor? </li>
+</ul>
+<p>Note that now, your Spot class should look like: </p>
+<pre><code>class Spot{
+  float xCoord, yCoord;
+  float diameter;
+  int red, green, blue, gray;
+
+  Spot()
+  {
+  }
+
+  Spot(float xPos, float yPos, float diamtr)
+  {
+     xCoord = xPos;
+     yCoord = yPos;
+     diameter = diamtr;
+   }
+
+   Spot(float xPos, float yPos, float diamtr, int grayVal)
+   {
+     xCoord = xPos;
+     yCoord = yPos;
+     diameter = diamtr;
+     colour(grayVal);
+   }
+
+   Spot(float xPos, float yPos, float diamtr, int redVal, int greenVal, int blueVal)
+   {
+     xCoord = xPos;
+     yCoord = yPos;
+     diameter = diamtr;
+     colour(redVal, greenVal, blueVal);  
+   }
+
+   void display()
+   {
+     ellipse(xCoord, yCoord, diameter, diameter);
+   } 
+
+   void colour(int redVal, int greenVal, int blueVal)
+   {
+     red = redVal;
+     green = greenVal;
+     blue = blueVal;
+     fill (red, green, blue);
+   }
+
+   void colour(int grayVal)
+   {
+     gray = grayVal;
+     fill (gray);
+   }
+}</code></pre>
+<ul>
+<li>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save&#39;&#39; menu options, save this sketchbook.(&#39;&#39;Spot_Version5_3&#39;&#39;)</li>
+</ul>
+<h2>Adding a move() method</h2>
+<ul>
+<li>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save As..&#39;&#39; menu option, save this sketchbook as &#39;&#39;Spot_Version6_0&#39;&#39;.
+-We now introduce a move method in the Spot class (this allows the spot to move). </li>
+<li>Add the following method in the Spot class:</li>
+</ul>
+<pre><code>   void move(float xPos, float yPos)
+   {
+     xCoord = xPos;
+     yCoord = yPos;
+   }</code></pre>
+<p>Now, to use(call) the method, in the Spot_Version6_1 tab, change the draw() method and constuctor call so that the code looks like: </p>
+<pre><code>Spot sp;
+
+void setup()
+{
+  size (100,100);
+  noStroke();
+  sp = new Spot(33, 50, 30, 125);
+}
+
+void draw()
+{
+  background(0);
+  sp.display();
+  sp.move(mouseX, mouseY);
+}</code></pre>
+<ul>
+<li>Run the code. What do you see. Do you understand why it looks like this? If you do not understand, ask your lecturer.</li>
+<li>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save&#39;&#39; menu options, save this sketchbook.(&#39;&#39;Spot_Version6_0&#39;&#39;)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>this keyword</h1>
+<ul>
+<li>We will now look at at the <strong>this</strong> keyword. </li>
+<li><p>Having looked at your lecture notes, you can see the this keyword working </p>
+</li>
+<li><p>(Assuming you have Spot_Version6_0 open).Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save As..&#39;&#39; menu option, save this sketchbook as &#39;&#39;Spot_Version6_1&#39;&#39;.</p>
+</li>
+<li>Include the following code in your Spot class (tab) (don&#39;t cut and paste it, type it in):</li>
+</ul>
+<pre><code>class Spot
+{
+  float xCoord, yCoord;
+  float diameter;
+  int red, green, blue, gray;
+
+  Spot()
+  {
+  }
+
+ Spot(float xCoord, float yCoord, float diameter)
+ {
+    this.xCoord = xCoord;
+    this.yCoord = yCoord;
+    this.diameter = diameter;
+  }
+
+  void display()
+  {
+    ellipse(xCoord, yCoord, diameter, diameter); 
+  }
+
+  void colour(int red, int green, int blue)
+  {
+    this.red = red;
+    this.green = green;
+    this.blue = blue;
+    fill (red, green, blue);
+  }
+
+  void colour(int gray){
+    this.gray = gray;
+    fill (this.gray);
+  }
+
+}</code></pre>
+<ul>
+<li>Then copy the following code into the Spot_Version6_1 tab: </li>
+</ul>
+<pre><code>Spot sp;
+
+void setup()
+{
+  size (100,100);
+  noStroke();
+  sp = new Spot(33, 50, 30);
+}
+
+void draw()
+{
+  background(0);
+  sp.colour(125);
+  sp.display();
+}</code></pre>
+<ul>
+<li><p>Run the code.  You should see the same  black window with a white square drawn in it.
+<img src="./img/03.png" alt="Drawing spot this keyword in SPot"></p>
+</li>
+<li><p>Note that the display() method in Spot does not use the this keyword. Change it so that it does. re-run the code to ensure that you get the same output.</p>
+</li>
+<li>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save&#39;&#39; menu option, save this sketchbook. (&#39;&#39;Spot_Version6_1&#39;&#39;)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Setters and Getters</h1>
+<ul>
+<li><p>Having read the lecture on Getters and Setters we now look at seeing how they work. </p>
+</li>
+<li><p>Create a new Processing sketchbook called &#39;&#39;Spot_Version7_0&#39;&#39;.</p>
+</li>
+<li><p>In the Spot class, write in the following code(including the setters and getters):</p>
+</li>
+</ul>
+<pre><code>public class Spot 
+{
+  private float xCoord, yCoord;
+  private float diameter;
+  private int red, green, blue, gray;
+
+  Spot()
+  {
+  }
+
+  Spot(float xCoord, float yCoord, float diameter)
+  {
+    this.xCoord = xCoord;
+    this.yCoord = yCoord;   
+    this.diameter = diameter;
+  }
+
+  void display()
+  {
+    ellipse(this.xCoord, this.yCoord, this.diameter, this.diameter);
+  }
+
+  void colour(int red, int green, int blue)
+  {
+     this.red = red;
+     this.green = green;
+     this.blue = blue;
+     fill(this.red, this.green, this.blue);
+  }
+
+  void colour(int gray){
+    this.gray = gray; 
+    fill (this.gray);
+  }
+
+  //------------------//
+  //     getters      //
+  //------------------//
+  public float getDiameter(){
+     return diameter;
+  }
+
+  public float xCoord(){
+    return xCoord;
+  }
+
+  public float yCoord(){
+    return yCoord;
+  }
+
+  public int getRed(){
+    return red;
+  }
+
+  public int getGreen(){
+    return green;
+  }
+
+  public int getBlue(){
+    return blue;
+  }
+
+  public int getGray(){
+    return gray;
+  }
+
+  //------------------//
+  //     setters      //
+  //------------------//
+  public void setDiameter(float diameter){
+        this.diameter = diameter;
+  } 
+
+  public void setXCoord(float xCoord){
+     this.xCoord = xCoord;
+  } 
+
+  public void setYCoord(float yCoord){
+     this.yCoord = yCoord;
+  } 
+
+  public void setRed(int red){
+      this.red = red;
+  } 
+
+  public void setGreen(int green) {
+      this.green = green;
+  } 
+
+  public void setBlue(int blue){
+      this.blue = blue;
+    }
+
+
+  public void setGray(int gray){
+       this.gray = gray;
+  } 
+
+}</code></pre>
+<ul>
+<li>Now, write the following code in the &#39;user&#39; tab (call it Spot_Version7_0)</li>
+</ul>
+<pre><code>Spot sp;
+
+void setup()
+{
+  size (100,100);
+  noStroke();
+  sp = new Spot(33, 50, 30);
+  println(&quot;After constructor, the value of the diameter is &quot; + sp.getDiameter());
+  // Now change the value of the diameter
+  sp.setDiameter(40);
+  println(&quot;After setter, the value of the diameter is &quot; + sp.getDiameter());
+}
+
+void draw()
+{
+  background(0);
+  sp.colour(255,0,0);
+  sp.display();
+}</code></pre>
+<ul>
+<li>Examine the code - getters and setters. Note what each of the methods do, their naming convention and return values etc.</li>
+<li>What do you think the output should be (on the console output under the code)?</li>
+</ul>
+<h2>Exercise</h2>
+<ul>
+<li>Add in your own code in setup to call different setters and check that they have changed the relevant field value by printing their values (using the getter method).</li>
+</ul>
+<ul>
+<li>When you are happy with how the getters and setters work,  Save the sketchbook as &#39;&#39;Spot_Version7_0&#39;&#39;.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Setters and Getters - validations</h1>
+<h2>Using validation in <strong>constructors</strong></h2>
+<ul>
+<li>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save as...&#39;&#39; menu options, save this sketchbook as &#39;&#39;Spot_Version7_1&#39;&#39;.</li>
+<li>Replace the  code in your (3 parameter) Spot constructor with the following code(don&#39;t cut and paste it, type it in):</li>
+</ul>
+<pre><code>
+Spot(float xCoord, float yCoord, float diameter)
+  {
+    this.xCoord = xCoord;
+    this.yCoord = yCoord;
+    if ((diameter &gt; 0) &amp;&amp; (diameter &lt; 500)){
+       this.diameter = diameter;
+    }
+    else{
+       this.diameter = 10;
+    } 
+  }</code></pre>
+<ul>
+<li><p>This code will only allow values of between (and including) 0 and 500 into the diameter field. If values outside this range are send in via parameter, then the value of 10 is assigned to the diameter field (using the else clause).</p>
+</li>
+<li><p>To see this validation in action, write the following code into the &#39;user&#39; tab (called &#39;&#39;Spot_Version7_1&#39;&#39;)</p>
+</li>
+</ul>
+<pre><code>Spot sp;
+
+void setup()
+{
+  size (100,100);
+  noStroke();
+  sp = new Spot(33, 50, 30000);
+  println(&quot;The value of diameter is : &quot;+ sp.getDiameter());
+}
+
+void draw()
+{
+  background(0);
+  sp.colour(255,0,0);
+  sp.display();
+}</code></pre>
+<p>Try to run the code. You should  see the following line in the console screen</p>
+<p><img src="./img/05.png" alt="Value of diameter field"></p>
+<h2>Use of validations in <strong>setters</strong></h2>
+<ul>
+<li>We use setters as the only safe way to change the values of fields after the object has been created (we can use the constructor validation rules at creation stage). </li>
+<li>We look at the setter for the value of the diameter field. </li>
+<li>A reasonable validation rule would be that this filed should be in the range 1..500. (anything bigger would mean the spot woud be too big for the screen) </li>
+<li>Without this validation rule, the setter method (in Spot) looked like this: </li>
+</ul>
+<pre><code>  public void setDiameter(float diameter){
+        this.diameter = diameter;
+  }</code></pre>
+<ul>
+<li>Using the validation rules above, the code should read: </li>
+</ul>
+<pre><code>  public void setDiameter(float diameter){
+    if ((diameter &gt; 0) &amp;&amp; (diameter &lt; 500)){
+        this.diameter = diameter;
+    }
+  }</code></pre>
+<ul>
+<li><p>Note: </p>
+<ul>
+<li>The use of the <strong><em>AND</em></strong> (&amp;&amp;) in the condition</li>
+<li>There is <strong><em>no</em></strong> else in the if statement. This means that if the parameter is not in the correct range, then the diameter field will remain unchanged. This is the convention we use for this module. </li>
+</ul>
+</li>
+<li><p>To see how this works, write the following code in the setup method (we are simply changing the call of the setter to try to change the value of diameter to an invalid (40000) value).</p>
+</li>
+</ul>
+<pre><code>void setup()
+{
+  size (100,100);
+  noStroke();
+  sp = new Spot(33, 50, 30);
+  println(&quot;After constructor, the value of the diameter is &quot; + sp.getDiameter());
+  // Now change the value of the diameter
+  sp.setDiameter(40000);
+  println(&quot;After setter, the value of the diameter is &quot; + sp.getDiameter());
+}</code></pre>
+<ul>
+<li>You should get the following output on the console:
+<img src="./img/06.png" alt="Validation not allowing a bad change"></li>
+</ul>
+<ul>
+<li>Save and close the sketchbook.(&#39;&#39;Spot_Version7_1&#39;&#39;)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>The exercises are based on the material we covered in the previous steps in this lab.</p>
+<ul>
+<li>For each exercise listed below, open a new sketchbook.</li>
+<li>For the <strong>challenge exercises</strong> you may need to visit the <a href="https://processing.org/reference/">Processing website</a> for additional information.</li>
+<li>When you are finished all your exercises, zip all your exercises into one file and upload them into <strong>lab08</strong> dropbox in Moodle.</li>
+</ul>
+<h2>Exercise 1</h2>
+<p>Implement the validation rules on the fields in the setters and any constructors you are using: </p>
+<ul>
+<li>rgb and grayscale field values must be in 1..255 </li>
+<li>diameter field must be in the range 1..500</li>
+</ul>
+<p>Show how you test the validation rules are working (see how this was done in an earlier unit in this lab, using println in setup()).</p>
+<h2>Exercise 2</h2>
+<p>Implement the validation rules for the colour() method. Again, test that the validation is working via the setup() method.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

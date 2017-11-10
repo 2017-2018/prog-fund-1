@@ -1,0 +1,402 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       More on Pong
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-12c">
+      Lab-12c
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00-assignments/book-1/index.html">
+          Formative Assessment
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00-assignments/book-2/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00-assignments/book-3/index.html">
+          Assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-1/index.html">
+          Lab-01a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-2/index.html">
+          Lab-01b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-scratching-deeper/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-intro-to-processing/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-2/index.html">
+          Code to Download
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-conditionals-and-events/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-iteration-for-while/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-methods/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-more-on-methods/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-strings-and-intro-to-classes/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-classes-encapsulation/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-2/index.html">
+          Lab-9b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-3/index.html">
+          Lab-11c
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-1/index.html">
+          Lab-12a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-2/index.html">
+          Lab-12b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-3/index.html">
+          Lab-12c
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-12c">
+        <h1>Objectives</h1>
+<p>On completion of this lab you should be familiar with the pythagorean theorem for collision detection.  In this lab, you will work on PongGameV9_0.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>The Game of Pong - Version 9</h1>
+<ul>
+<li><p>In this version of the game, we will refactor PongGameV8_0 so that it uses the Pythagorean Theorem version for collision detection.</p>
+</li>
+<li><p>Open your latest version of PongGame version 8. If you are not confident that it is working, you can use this solution <a href="archives/PongGameV8_0.zip">here</a>.</p>
+</li>
+<li><p>Save this as PongGameV9_0.</p>
+</li>
+</ul>
+<h2>hitPaddle method</h2>
+<p>In your PongGameV9_0 class, you will see a <strong>hitPaddle</strong> method.  </p>
+<p>Replace it with this code i.e. the pythagoreas version of collision detection:</p>
+<pre><code class="lang-java">//method returns true if the ball and paddle overlap (i.e. ball is hit), false otherwise.
+
+boolean hitPaddle(Paddle paddle, Ball ball)
+{
+   //These variables measure the magnitude of the gap between the paddle and the ball.  
+   float circleDistanceX = abs(ball.getXCoord() - paddle.getXCoord() - paddle.getPaddleWidth()/2);
+   float circleDistanceY = abs(ball.getYCoord() - paddle.getYCoord() - paddle.getPaddleHeight()/2);
+
+   if (circleDistanceX &gt; (paddle.getPaddleWidth()/2  + ball.getDiameter()/2)) { return false; }
+   if (circleDistanceY &gt; (paddle.getPaddleHeight()/2 + ball.getDiameter()/2)) { return false; }
+
+   if (circleDistanceX &lt;= (paddle.getPaddleWidth()/2))  { 
+      return true;
+   }
+   if (circleDistanceY &lt;= (paddle.getPaddleHeight()/2)) { 
+      return true;
+   } 
+
+   float cornerDistance = pow(circleDistanceX - paddle.getPaddleWidth()/2,  2) +
+                          pow(circleDistanceY - paddle.getPaddleHeight()/2, 2);
+
+   if (cornerDistance &lt;= pow(ball.getDiameter()/2, 2)){
+      return true;
+   } 
+   else{
+      return false;
+   }
+}</code></pre>
+<p>Run your game to ensure that the collision detection works correctly. </p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

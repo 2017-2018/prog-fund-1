@@ -1,0 +1,472 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Arrays and Pong
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-11a">
+      Lab-11a
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00-assignments/book-1/index.html">
+          Formative Assessment
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00-assignments/book-2/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00-assignments/book-3/index.html">
+          Assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-1/index.html">
+          Lab-01a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-2/index.html">
+          Lab-01b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-scratching-deeper/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-intro-to-processing/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-2/index.html">
+          Code to Download
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-conditionals-and-events/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-iteration-for-while/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-methods/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-more-on-methods/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-strings-and-intro-to-classes/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-classes-encapsulation/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-2/index.html">
+          Lab-9b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-3/index.html">
+          Lab-11c
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-1/index.html">
+          Lab-12a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-2/index.html">
+          Lab-12b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-3/index.html">
+          Lab-12c
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-11a">
+        <h1>Objectives</h1>
+<p>On completion of this lab you should be able to use JOptionPane to produce messages and dialog boxes.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Solution to Previous Lab</h1>
+<p>The solution for the previous lab can be found <a href="archives/lab08_solution.zip">here</a>. </p>
+<h1>Remember our lab advice!</h1>
+<ul>
+<li>Your labs are not a race to be the first student finished.</li>
+<li>It is very important that you:<ul>
+<li>take your time.</li>
+<li>read the instructions carefully.</li>
+<li>ask your lecturer to explain concepts that you don&#39;t understand; that is what we are here for!</li>
+<li>attend &#39;&#39;ALL&#39;&#39; your classes; attendance will be taken.</li>
+</ul>
+</li>
+<li>where code is given in labs, don&#39;t cut and paste it; maximise your learning by typing the code in.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Using Swing - JoptionPane</h1>
+<ul>
+<li>To use JOptionPane, we must import the Swing package</li>
+</ul>
+<pre><code>import javax.swing.*;</code></pre>
+<h2>Simple Message Output</h2>
+<p>In this step, you will use JOptionPane to write a simple message.</p>
+<p>Create a new Processing sketch in your workspace and call it JOption.</p>
+<p>Include the following code in your sketch (don&#39;t cut and paste it, type it in):
+Add in the code to the import statement above:</p>
+<pre><code>JOptionPane.showMessageDialog(null,     
+        &quot;Welcome to the 12 days of Christmas&quot;);</code></pre>
+<p>Run your code  You should get the following output:<br> <img src="./img/01.png" alt="Using JOptionPane for simple output"></p>
+<h2>Adding detail to simple message</h2>
+<ul>
+<li>Add the following code</li>
+<li>The default option (above) has a small icon. To have no such icon, you can add a &#39;PLAIN_MESSAGE&#39; option:</li>
+</ul>
+<pre><code>  JOptionPane.showMessageDialog(null,     
+        &quot;Welcome to the 12 days of Christmas”
+        “Christmas Title”,
+        JOptionPane.PLAIN_MESSAGE);</code></pre>
+<p>Run your code  You should get the following output:<br> <img src="./img/02.png" alt="Using JOptionPane for simple output with no icon"></p>
+<h2>Entering data via dialog box</h2>
+<ul>
+<li>We now start to look at user input. The default way of seeing the input is a string. </li>
+<li>Add the following code</li>
+</ul>
+<pre><code>String day = JOptionPane.showInputDialog(
+        &quot;Welcome to Christmas week\n\n &quot; +  
+        &quot;Please enter the day: &quot;,
+        &quot;Monday&quot;););
+println(&quot;Day is : &quot; + day);</code></pre>
+<ul>
+<li>Run your code  You should get the following output (the print statement will also print out on the console):<br><img src="./img/03.png" alt="Using JOptionPane for reading input"></li>
+</ul>
+<h2>Entering numbers via dialog box</h2>
+<ul>
+<li>We now start to look at number input. The default way of seeing the input is a string so we need to convert the string to a number</li>
+<li>Add the following code</li>
+</ul>
+<pre><code>int num = Integer.parseInt  (JOptionPane.showInputDialog(
+        &quot;Enter a number between 0 and 10&quot;, &quot;3” ) );</code></pre>
+<ul>
+<li><p>Run the code.  Your output should now look like:
+<img src="./img/04.png" alt="Taking in number input"></p>
+</li>
+<li><p>Using the &#39;&#39;File&#39;&#39;, &#39;&#39;Save&#39;&#39; menu option, save this sketchbook.</p>
+</li>
+</ul>
+<h2>Using a yes/no question box</h2>
+<ul>
+<li><p>Sometimes we will need a simple yes/no dialog box.</p>
+</li>
+<li><p>Include the following extra method code in your Spot class (don&#39;t cut and paste it, type it in):</p>
+</li>
+</ul>
+<pre><code>int reply = JOptionPane.showConfirmDialog(null,           
+     “Did you watch the Late Late Toy Show on Saturday night?&quot;,                
+     &quot;Christmas Question&quot;,   
+     JOptionPane.YES_NO_OPTION);</code></pre>
+<ul>
+<li>Run the code.  Your output should now look like:
+<img src="./img/05.png" alt="Yes/No option dialog"></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>The exercises are based on the material we covered in the previous steps in this lab.</p>
+<ul>
+<li><p>For each exercise listed below, open a new sketchbook.</p>
+</li>
+<li><p>When you are finished all your exercises, zip all your exercises into one file and upload them into the associated dropbox in Moodle.</p>
+</li>
+</ul>
+<h2>Exercise 1</h2>
+<p>Change the text in the message dialog box (showMessageDialog) . </p>
+<h2>Exercise 2</h2>
+<p>Change the icon in the message box (where would you find the different options? )</p>
+<h2>Exercise 3</h2>
+<p>Change the text in the data input box (showInputDialog) to your own choice. Also, check that the output on the console shows that the input has been sucessful.</p>
+<h2>Exercise 4</h2>
+<p>Using Integer.parseInt, convert the input into a number. Using println(), show that the input has been converted to a number (hint: Try to add the number to another number)</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

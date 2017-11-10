@@ -1,0 +1,541 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Arrays and Pong
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-9b">
+      Lab-9b
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00-assignments/book-1/index.html">
+          Formative Assessment
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00-assignments/book-2/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00-assignments/book-3/index.html">
+          Assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-1/index.html">
+          Lab-01a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-intro-to-scratch/book-2/index.html">
+          Lab-01b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-scratching-deeper/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-intro-to-processing/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-animate-your-drawings/book-2/index.html">
+          Code to Download
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-conditionals-and-events/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-iteration-for-while/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-methods/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-more-on-methods/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-strings-and-intro-to-classes/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-classes-encapsulation/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-2/index.html">
+          Lab-9b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-arrays-and-pong/book-3/index.html">
+          Lab-11c
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-1/index.html">
+          Lab-12a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-2/index.html">
+          Lab-12b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-more-on-pong/book-3/index.html">
+          Lab-12c
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-9b">
+        <h1>Objectives</h1>
+<p>On completion of this lab you should be able to declare, construct and manipulate an array.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Remember our lab advice!</h1>
+<ul>
+<li>Your labs are not a race to be the first student finished.</li>
+<li>It is very important that you:<ul>
+<li>take your time.</li>
+<li>read the instructions carefully.</li>
+<li>ask your lecturer to explain concepts that you don&#39;t understand; that is what we are here for!</li>
+<li>attend &#39;&#39;ALL&#39;&#39; your classes; attendance will be taken.</li>
+</ul>
+</li>
+<li>where code is given in labs, don&#39;t cut and paste it; maximise your learning by typing the code in.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Using Arrays</h1>
+<ul>
+<li>In this section, we will introduce the use of arrays as discussed in lectures</li>
+</ul>
+<h2>Reading in numbers and adding them</h2>
+<p>In this step, you will use JOptionPane to read in 5 numbers, add them together and print their sum in the console window. </p>
+<p>Create a new Processing sketch in your workspace and call it Arrays_01.</p>
+<p>Include the following code in your sketch (don&#39;t cut and paste it, type it in):
+Add in the following  code:</p>
+<pre><code>import javax.swing.*;  
+int n;
+int sum = 0;
+for (int i = 0; i&lt;5; i++)  {    
+   n = Integer.parseInt (JOptionPane.showInputDialog(&quot;Please enter a number &quot;, &quot;3&quot;));    
+   sum += n;  
+  }
+println(&quot;The sum of the values you typed in is : &quot; +   sum);</code></pre>
+<ul>
+<li><p>Run your code. The sum of the 5 numbers you have entered should be printed to the console.</p>
+</li>
+<li><p>Next, use JOptionPane methods to report the sum via dialog window. </p>
+</li>
+<li><p>How would you change this code to readin and add 10 numbers? </p>
+</li>
+<li><p>Note that we have not stored the input data for possible future use. </p>
+</li>
+<li><p>Save this sketch.</p>
+</li>
+</ul>
+<h2>Adding 5 numbers and remembering them</h2>
+<p>In this step, you will use JOptionPane to read in  5 numbers, add them together and print their sum in the console window. In this code, we declare 5 data variables to remember the input for possible future use. </p>
+<p>Create a new Processing sketch in your workspace and call it Arrays_02.</p>
+<p>Include the following code in your sketch (do not  cut and paste it, type it in):</p>
+<p>Add in the following code :</p>
+<pre><code>import javax.swing.*;  
+int n0,n1, n2, n3, n4;
+int sum = 0;
+
+n0 = Integer.parseInt(JOptionPane.showInputDialog(&quot;Please enter a number &quot;, &quot;3&quot;));
+sum += n0;
+n1 = Integer.parseInt(JOptionPane.showInputDialog(&quot;Please enter a number &quot;, &quot;3&quot;));
+sum += n1;
+n2 = Integer.parseInt(JOptionPane.showInputDialog(&quot;Please enter a number &quot;, &quot;3&quot;));
+sum += n2;
+n3 = Integer.parseInt(JOptionPane.showInputDialog(&quot;Please enter a number &quot;, &quot;3&quot;));
+sum += n3;
+n4 = Integer.parseInt(JOptionPane.showInputDialog(&quot;Please enter a number &quot;, &quot;3&quot;));
+sum += n4;
+
+println(&quot;The sum of the values you typed in is : &quot; + sum);</code></pre>
+<ul>
+<li><p>Run your code. The sum of the 5 numbers you have entered should be printed to the console.</p>
+</li>
+<li><p>Next, use JOptionPane methods to report the sum via dialog window. </p>
+</li>
+<li><p>How would you change this code to readin and add 8 numbers?  (Note the difference in the two methods)</p>
+</li>
+<li><p>Save your code.</p>
+</li>
+</ul>
+<h2>Using arrays to store and add numbers</h2>
+<ul>
+<li><p>In this step, you will use JOptionPane to read in  5 numbers into an array, add them together and print their sum in the console window. In this code, we declare an integer array if size five(allows 5 values to be stored from index 0 to 4)</p>
+</li>
+<li><p>Create a new Processing sketch in your workspace and call it Arrays_03.</p>
+</li>
+</ul>
+<ul>
+<li><p>Include the following code in your sketch (do not  cut and paste it, type it in):</p>
+</li>
+<li><p>Add in the following code :</p>
+</li>
+</ul>
+<pre><code>import javax.swing.*;  
+
+int a[] = new int[5];             
+int sum = 0;
+
+for (int i = 0; i &lt; 5 ; i ++)  {    
+    a[i] = Integer.parseInt(JOptionPane.showInputDialog(
+    &quot;Please enter a number &quot;, &quot;3&quot;));  
+}      
+
+for (int i = 0; i &lt; 5 ; i ++)   {   // now we sum the values  
+       sum += a[i];  
+} 
+
+ println(&quot;The sum of the values you typed in is : &quot; + sum);</code></pre>
+<ul>
+<li><p>Run your code. The sum of the 5 numbers you have entered should be printed to the console.</p>
+</li>
+<li><p>How would you change this code to readin and add 8 numbers?  (You should find this to be the best solution)</p>
+</li>
+<li>Save the code. </li>
+</ul>
+<h2>Inputting the size of the array</h2>
+<ul>
+<li><p>A primitive array is of fixed size. So once you construct (using new) the array, you cannot change its size. </p>
+</li>
+<li><p>However, you can read in this value (size of the array) before constructing the array. </p>
+</li>
+<li><p>The next piece of code demonstrates this approach.</p>
+</li>
+<li><p>Create a new Processing sketch in your workspace and call it Arrays_04.</p>
+</li>
+</ul>
+<ul>
+<li><p>Include the following code in your sketch (do not  cut and paste it, type it in):</p>
+</li>
+<li><p>Add in the following code :</p>
+</li>
+</ul>
+<pre><code>import javax.swing.*;  
+
+int a[];
+int numData = Integer.parseInt(JOptionPane.showInputDialog(&quot;How many values do you wish to sum? &quot;, &quot;3&quot;));
+//now, use this value to make the array this size.
+a = new int[numData];             
+int sum = 0;
+
+for (int i = 0; i &lt; numData ; i ++)
+  {
+    a[i] = Integer.parseInt(JOptionPane.showInputDialog(&quot;Please enter a number &quot;, &quot;3&quot;));
+    sum += a[i];
+  }
+
+
+ println(&quot;The sum of the values you typed in is : &quot; + sum);</code></pre>
+<ul>
+<li><p>Run your code. The sum of the number of  numbers you have entered should be printed to the console.</p>
+</li>
+<li><p>You should see that this is a good way to deal with summing a unknown number of values. </p>
+</li>
+<li><p>Save the code. </p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>The exercises are based on the material we covered in the previous steps in this lab.</p>
+<ul>
+<li><p>For each exercise listed below, open a new sketchbook.</p>
+</li>
+<li><p>When you are finished all your exercises, zip all your exercises into one file and upload them into the associated dropbox in Moodle.</p>
+</li>
+</ul>
+<h2>Exercise 1</h2>
+<p>Write a program to declare and construct an integer array (a) of size 10. Initialise the array by putting 10 in each of the cells. Print out the values to the console (one line at a time).</p>
+<h2>Exercise 2</h2>
+<p>Write a program to declare and construct an integer array (a) of size 5. Read in 5 values into the array.  Print out the values to the console (one line at a time) in the order they were entered.</p>
+<h2>Exercise 3</h2>
+<p>Write a program to declare and construct an integer array (a) of size 5. Read in 5 values into the array.  Print out the values to the console (one line at a time) in the reverse order to the order they were entered in.</p>
+<h2>Exercise 4</h2>
+<p>Write a program to declare and construct an integer array (a) of size 5. Read in 5 values into the array. Then add 10 to each of these values. Then print out the values to the console. </p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
