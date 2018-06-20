@@ -117,17 +117,33 @@ body
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-       More on Pong 
+       Assignments 
     </a>
   </header>
   <div class="right tab-menu menu">
     
-    <a class="item" data-tab="Lab-12c">
-      Lab-12c
+    <a class="item" data-tab="RepeatAssignment">
+      RepeatAssignment
     </a>
     
-    <a class="item" data-tab="01">
-      01
+    <a class="item" data-tab="Overview">
+      Overview
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Submission">
+      Submission
     </a>
     
     <div class="item">
@@ -159,7 +175,7 @@ body
       
     
       
-        <a class="item" href="../../topic00-assignments/book-4/index.html">
+        <a class="active item" href="../../topic00-assignments/book-4/index.html">
           RepeatAssignment
         </a>
       
@@ -267,7 +283,7 @@ body
       
     
       
-        <a class="active item" href="../../topic12-more-on-pong/book-3/index.html">
+        <a class="item" href="../../topic12-more-on-pong/book-3/index.html">
           Lab-12c
         </a>
       
@@ -277,54 +293,138 @@ body
     <div class="ui basic segment" id="labchat">
       <br>
       
-      <div  class="ui tab segment lab" data-tab="Lab-12c">
-        <h1>Objectives</h1>
-<p>On completion of this lab you should be familiar with the pythagorean theorem for collision detection.  In this lab, you will work on PongGameV9_0.</p>
+      <div  class="ui tab segment lab" data-tab="RepeatAssignment">
+        <h1>Repeat Assignment for Programming Fundamentals 1</h1>
+<ul>
+<li>The details of your repeat assignment are listed in this area.</li>
+</ul>
 
       </div>
      
-      <div  class="ui tab segment lab" data-tab="01">
-        <h1>The Game of Pong - Version 9</h1>
+      <div  class="ui tab segment lab" data-tab="Overview">
+        <h1>Overview of assignment</h1>
 <ul>
-<li><p>In this version of the game, we will refactor PongGameV8_0 so that it uses the Pythagorean Theorem version for collision detection.</p>
-</li>
-<li><p>Open your latest version of PongGame version 8. If you are not confident that it is working, you can use this solution <a href="archives/PongGameV8_0.zip">here</a>.</p>
-</li>
-<li><p>Save this as PongGameV9_0.</p>
+<li>This is your repeat assignment. </li>
+<li>You are asked to write a working animation. See the details in the following pages. </li>
+<li>The deadline for submission is August 31st 2016 (interview the following week). </li>
+<li>We strongly suggest that you begin to work on this assignment immediately - this will help you to get started on a good footing for this semester&#39;s module and also it will leave the summer free for you. Once you have submitted the assignment (if it is before June 15th), we will interview you and give you an indication at that stage of your marks (i.e. pass, borderline, fail).</li>
+<li>No matter when you submit (i.e. now or in August 2016), the marks will not officially be processed until September 2016 (repeat sesssion). You will still need to enter for the repeat examination. </li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Specification</h1>
+<p>This is the specification of your repeat assignment i.e. the grade for this assignment will be your entire final (repeat) module mark. This specification will describe:</p>
+<ul>
+<li>What is expected from your code.</li>
+<li>The marking scheme for the assignment.</li>
+<li>Submission details including submission date.</li>
+</ul>
+<h1>Assignment Advice</h1>
+<ul>
+<li>Read the specification carefully.</li>
+<li>Start working on the assignment early.</li>
+<li>When you think you are ready to submit check the following: <ul>
+<li>Ensure you have all covered all the elements mentioned in the marking scheme</li>
+<li>Ensure specifically that your indentation is consistent. </li>
+<li>Write comments to explain what any classes and methods do and how any particularly tricky code works and what it does.</li>
+<li>Ensure that your name, student number and description of what your code does is written at the top of the sketch file.</li>
+<li>Ensure that you have named the submission (zip) file according to the prescribed naming convention. </li>
+</ul>
 </li>
 </ul>
-<h2>hitPaddle method</h2>
-<p>In your PongGameV9_0 class, you will see a <strong>hitPaddle</strong> method.  </p>
-<p>Replace it with this code i.e. the pythagoreas version of collision detection:</p>
-<pre><code class="lang-java">//method returns true if the ball and paddle overlap (i.e. ball is hit), false otherwise.
 
-boolean hitPaddle(Paddle paddle, Ball ball)
-{
-   //These variables measure the magnitude of the gap between the paddle and the ball.  
-   float circleDistanceX = abs(ball.getXCoord() - paddle.getXCoord() - paddle.getPaddleWidth()/2);
-   float circleDistanceY = abs(ball.getYCoord() - paddle.getYCoord() - paddle.getPaddleHeight()/2);
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Specification</h1>
+<p>In this assignment, you are asked to write code to produce a working animation of your choice in Processing (Java).</p>
+<p>The aim of the assignment is for you to demonstrate your understanding of structures seen so far, so you are asked to include the following :</p>
+<ul>
+<li>At least one user-defined class, adhering to encapsulation rules, complete with:<ul>
+<li>fields</li>
+<li>constructors</li>
+<li>getters</li>
+<li>setters</li>
+<li>other methods</li>
+</ul>
+</li>
+<li>The usual Processing class containing the draw(), setup(), etc.  This class must use your user-defined class(es) in an appropriate manner.</li>
+<li>Use of String methods.</li>
+<li>Use of primitive arrays.</li>
+</ul>
+<p>Refer to the Pong game covered in lectures and labs for inspiration. </p>
+<p>The complexity of the entire code is important, i.e. the more complex the code, the more marks you will achieve. (see marking scheme)</p>
 
-   if (circleDistanceX &gt; (paddle.getPaddleWidth()/2  + ball.getDiameter()/2)) { return false; }
-   if (circleDistanceY &gt; (paddle.getPaddleHeight()/2 + ball.getDiameter()/2)) { return false; }
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Marking Scheme</h1>
+<p>There are three components to your overall mark:</p>
+<ul>
+<li>Structure of code</li>
+<li>Complexity of code</li>
+<li>Interview mark</li>
+</ul>
+<h1>Structure of Code  (100 Marks)</h1>
+<ul>
+<li>User-defined class (at least one):<ul>
+<li>Creation of user-defined class with appropriate fields, constructors, getters, setters, other methods(25 marks).</li>
+<li>The user-defined class(es) are used in an appropriate manner (15 marks).</li>
+</ul>
+</li>
+<li>Working animation i.e. inclusion of the usual Processing class containing the draw(), setup(), etc (20 marks):</li>
+<li>Data structure:<ul>
+<li>Use of a data structure to store information i.e. a primitive array (15 marks).</li>
+<li>Calculations performed on the information stored (10 marks).</li>
+</ul>
+</li>
+<li>Use of String methods (5 marks).</li>
+<li>Comments, indentation, naming, structure of code, etc (10 Marks)</li>
+</ul>
+<h1>Complexity of code (10 Marks)</h1>
+<p>This is a mark out of 10 based on the complexity of the problem solved/code. So you will get more marks if the animation is more involved than one that is very simple. Please do not confuse an elegant solution of a complex problem with a simple problem.</p>
+<h1>Interview Mark (10 Marks)</h1>
+<p>You will be asked to explain your work during study week. This is to ensure that the work is your own. You may be asked (for example) to explain:</p>
+<ul>
+<li>Any of the code.</li>
+<li>How you decided on your animation.</li>
+<li>How you developed your animation; where did you start first, etc?</li>
+<li>Anything else.</li>
+</ul>
+<h1>How is the final mark calculated?</h1>
+<p> The final mark is calculated by multiplying the three component marks and dividing by 100. This means that each of the marks is used as a multiplier so a weakness in any of the components will negatively affect your grade.</p>
+<p> Example:</p>
+<ul>
+<li>Structure of code = 80/100</li>
+<li>Complexity of code = 9/10</li>
+<li>Interview Mark = 10/10</li>
+<li>Final mark = (80 by 9 by 10)/100 = 72%</li>
+</ul>
+<h1>Note</h1>
+<p>Specifically, the multiplier effect means that if you do not present for your interview you will receive 0 for the interview and 0% overall. This means you must be avaiable for interview during study week. </p>
 
-   if (circleDistanceX &lt;= (paddle.getPaddleWidth()/2))  { 
-      return true;
-   }
-   if (circleDistanceY &lt;= (paddle.getPaddleHeight()/2)) { 
-      return true;
-   } 
-
-   float cornerDistance = pow(circleDistanceX - paddle.getPaddleWidth()/2,  2) +
-                          pow(circleDistanceY - paddle.getPaddleHeight()/2, 2);
-
-   if (cornerDistance &lt;= pow(ball.getDiameter()/2, 2)){
-      return true;
-   } 
-   else{
-      return false;
-   }
-}</code></pre>
-<p>Run your game to ensure that the collision detection works correctly. </p>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Submission">
+        <h1>Handup of submission</h1>
+<h2>Date</h2>
+<p>The submission is due on Wednesday 31st August at 11am SHARP.
+See overview for possibilites of early submission and interview</p>
+<h2>Where</h2>
+<p>The dropbox is available in Moodle.</p>
+<h2>File naming convention</h2>
+<p>Your file should be contained in a sketchbook named  according to the rule : first letter of first name + second name, e.g. Siobhan Drohan&#39;s sketchbook would be called sdrohan. You should then compress (zip) the folder that contains this  sketchbook (sdrohan) and this is the file that you should submit.</p>
+<h2>readme tab</h2>
+<p>You should include a readme tab in the sketchbook that you use to write the following information in the following format:</p>
+<p>/*
+Name : 
+Student Number:
+Programme Name: </p>
+<p>Description of the animation achieved:</p>
+<p>Known bugs/problems:</p>
+<p>*/</p>
 
       </div>
      
